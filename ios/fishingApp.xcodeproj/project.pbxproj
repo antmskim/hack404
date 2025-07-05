@@ -7,11 +7,38 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0C80B921A6F3F58F76C31292 /* libPods-fishingApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DCACB8F33CDC322A6C60F78 /* libPods-fishingApp.a */; };
 		0E2C7B57EF401C15CBAF8F0B /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		761780ED2CA45674006654EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761780EC2CA45674006654EE /* AppDelegate.swift */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		9A005F2A1423745BDC5841A5 /* libPods-fishingApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D3958DDC4F7E5CA37ED03E55 /* libPods-fishingApp.a */; };
+		2C02C0DC966C4ED49968D5FD /* Kelomang-zrXlL.otf in Resources */ = {isa = PBXBuildFile; fileRef = A8081DC484AA472B86D2667F /* Kelomang-zrXlL.otf */; };
+		CD0638E606584AC9AC3C43FC /* Fredoka-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0511D5FB90B945BAA6F8A88D /* Fredoka-Bold.ttf */; };
+		27D0DB1B81EB4C0A8F24BACD /* Fredoka-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CBADFF97F94744D390F86E2C /* Fredoka-Light.ttf */; };
+		1038230C1303451EA4EF6C4D /* Fredoka-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C013724A199045D9976C049A /* Fredoka-Medium.ttf */; };
+		7059DC7975A649BEA12EFB4D /* Fredoka-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 97B2F7609B754A64A5A34437 /* Fredoka-Regular.ttf */; };
+		7D544D36183F47D588544F9E /* Fredoka-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 67FF6DB581A34F3D95E90FE1 /* Fredoka-SemiBold.ttf */; };
+		D262152F879742449F41D756 /* Fredoka-VariableFont_wdth,wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5F277A3964B74F6A9B1C1A54 /* Fredoka-VariableFont_wdth,wght.ttf */; };
+		CFF35E4EE9F54732BE468A96 /* Fredoka_Condensed-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 872AB9BBF54441238CA2CC1C /* Fredoka_Condensed-Bold.ttf */; };
+		1CE934B8D3E249DD80D2D5B7 /* Fredoka_Condensed-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8BB2A38A828A427A9097A2E8 /* Fredoka_Condensed-Light.ttf */; };
+		FE38FBF497594E7DBEAEB175 /* Fredoka_Condensed-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D80B22686C1043309DA07D32 /* Fredoka_Condensed-Medium.ttf */; };
+		77191D4FF55044E0ACA1FFFB /* Fredoka_Condensed-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E3F3719330CA4622AA8666D4 /* Fredoka_Condensed-Regular.ttf */; };
+		D244AC9AB2394D738FF667B3 /* Fredoka_Condensed-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E98E4F4B7B93497D9A96DA86 /* Fredoka_Condensed-SemiBold.ttf */; };
+		A423A1B54AC745BB87DDFFFA /* Fredoka_Expanded-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DDCA8D10DE4C40759C1B1645 /* Fredoka_Expanded-Bold.ttf */; };
+		EF0148F82C5E4DC897C87960 /* Fredoka_Expanded-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0052406C033F4942B12A255F /* Fredoka_Expanded-Light.ttf */; };
+		50D662C77FF94137BC3220E3 /* Fredoka_Expanded-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7F169671E18F4E69A063C347 /* Fredoka_Expanded-Medium.ttf */; };
+		8032A0AB700D4704AC8CCEC5 /* Fredoka_Expanded-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8264A23145564DAAB46E50A7 /* Fredoka_Expanded-Regular.ttf */; };
+		9051C23B4AAF45B78AA13167 /* Fredoka_Expanded-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 58B464F72F7948DF846E8550 /* Fredoka_Expanded-SemiBold.ttf */; };
+		8D6D4B27ED7C44E6BD5C8DED /* Fredoka_SemiCondensed-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 17E9D8B44DF641A5851786C6 /* Fredoka_SemiCondensed-Bold.ttf */; };
+		360220CD60CE48969C9F778F /* Fredoka_SemiCondensed-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AC0A2207FC8F4A4E89DDE580 /* Fredoka_SemiCondensed-Light.ttf */; };
+		A817B6A5EED44959BA614561 /* Fredoka_SemiCondensed-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 26161BFB7893444FA2A9648B /* Fredoka_SemiCondensed-Medium.ttf */; };
+		4D5E1A6C917C4544BE7698A8 /* Fredoka_SemiCondensed-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EDF3FB5E2C234E63AE4AF4C9 /* Fredoka_SemiCondensed-Regular.ttf */; };
+		D9300F896C364FA985EBF756 /* Fredoka_SemiCondensed-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9371D1C5B84A4C67B897FA0A /* Fredoka_SemiCondensed-SemiBold.ttf */; };
+		6768E8CBB9D645EB87F88C95 /* Fredoka_SemiExpanded-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DF31E292B97D417D9D7B54AF /* Fredoka_SemiExpanded-Bold.ttf */; };
+		552DE779C2C64D4B885393A4 /* Fredoka_SemiExpanded-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F18ED91ED28249E593FA744D /* Fredoka_SemiExpanded-Light.ttf */; };
+		A8FE5E1565674683A58F4F92 /* Fredoka_SemiExpanded-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6979613811D9411D8EF760CF /* Fredoka_SemiExpanded-Medium.ttf */; };
+		03AEC4BA472E4BEBB1376471 /* Fredoka_SemiExpanded-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 758914EE77324712956AA4AC /* Fredoka_SemiExpanded-Regular.ttf */; };
+		94B1F6972FC84BA1BDD3799E /* Fredoka_SemiExpanded-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 77004D179ABA4F28B3BFCB18 /* Fredoka_SemiExpanded-SemiBold.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,12 +46,39 @@
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = fishingApp/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = fishingApp/Info.plist; sourceTree = "<group>"; };
 		13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = PrivacyInfo.xcprivacy; path = fishingApp/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
-		3B4392A12AC88292D35C810B /* Pods-fishingApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fishingApp.debug.xcconfig"; path = "Target Support Files/Pods-fishingApp/Pods-fishingApp.debug.xcconfig"; sourceTree = "<group>"; };
-		5709B34CF0A7D63546082F79 /* Pods-fishingApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fishingApp.release.xcconfig"; path = "Target Support Files/Pods-fishingApp/Pods-fishingApp.release.xcconfig"; sourceTree = "<group>"; };
-		5DCACB8F33CDC322A6C60F78 /* libPods-fishingApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-fishingApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		208B9F60B0C1F2006EDF7A14 /* Pods-fishingApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fishingApp.debug.xcconfig"; path = "Target Support Files/Pods-fishingApp/Pods-fishingApp.debug.xcconfig"; sourceTree = "<group>"; };
+		50A1EE883BC9A429AB7883EF /* Pods-fishingApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fishingApp.release.xcconfig"; path = "Target Support Files/Pods-fishingApp/Pods-fishingApp.release.xcconfig"; sourceTree = "<group>"; };
 		761780EC2CA45674006654EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = fishingApp/AppDelegate.swift; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = fishingApp/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D3958DDC4F7E5CA37ED03E55 /* libPods-fishingApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-fishingApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		A8081DC484AA472B86D2667F /* Kelomang-zrXlL.otf */ = {isa = PBXFileReference; name = "Kelomang-zrXlL.otf"; path = "../assets/fonts/Kelomang-zrXlL.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		0511D5FB90B945BAA6F8A88D /* Fredoka-Bold.ttf */ = {isa = PBXFileReference; name = "Fredoka-Bold.ttf"; path = "../assets/fonts/Fredoka-Bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		CBADFF97F94744D390F86E2C /* Fredoka-Light.ttf */ = {isa = PBXFileReference; name = "Fredoka-Light.ttf"; path = "../assets/fonts/Fredoka-Light.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		C013724A199045D9976C049A /* Fredoka-Medium.ttf */ = {isa = PBXFileReference; name = "Fredoka-Medium.ttf"; path = "../assets/fonts/Fredoka-Medium.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		97B2F7609B754A64A5A34437 /* Fredoka-Regular.ttf */ = {isa = PBXFileReference; name = "Fredoka-Regular.ttf"; path = "../assets/fonts/Fredoka-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		67FF6DB581A34F3D95E90FE1 /* Fredoka-SemiBold.ttf */ = {isa = PBXFileReference; name = "Fredoka-SemiBold.ttf"; path = "../assets/fonts/Fredoka-SemiBold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		5F277A3964B74F6A9B1C1A54 /* Fredoka-VariableFont_wdth,wght.ttf */ = {isa = PBXFileReference; name = "Fredoka-VariableFont_wdth,wght.ttf"; path = "../assets/fonts/Fredoka-VariableFont_wdth,wght.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		872AB9BBF54441238CA2CC1C /* Fredoka_Condensed-Bold.ttf */ = {isa = PBXFileReference; name = "Fredoka_Condensed-Bold.ttf"; path = "../assets/fonts/Fredoka_Condensed-Bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		8BB2A38A828A427A9097A2E8 /* Fredoka_Condensed-Light.ttf */ = {isa = PBXFileReference; name = "Fredoka_Condensed-Light.ttf"; path = "../assets/fonts/Fredoka_Condensed-Light.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		D80B22686C1043309DA07D32 /* Fredoka_Condensed-Medium.ttf */ = {isa = PBXFileReference; name = "Fredoka_Condensed-Medium.ttf"; path = "../assets/fonts/Fredoka_Condensed-Medium.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		E3F3719330CA4622AA8666D4 /* Fredoka_Condensed-Regular.ttf */ = {isa = PBXFileReference; name = "Fredoka_Condensed-Regular.ttf"; path = "../assets/fonts/Fredoka_Condensed-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		E98E4F4B7B93497D9A96DA86 /* Fredoka_Condensed-SemiBold.ttf */ = {isa = PBXFileReference; name = "Fredoka_Condensed-SemiBold.ttf"; path = "../assets/fonts/Fredoka_Condensed-SemiBold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		DDCA8D10DE4C40759C1B1645 /* Fredoka_Expanded-Bold.ttf */ = {isa = PBXFileReference; name = "Fredoka_Expanded-Bold.ttf"; path = "../assets/fonts/Fredoka_Expanded-Bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		0052406C033F4942B12A255F /* Fredoka_Expanded-Light.ttf */ = {isa = PBXFileReference; name = "Fredoka_Expanded-Light.ttf"; path = "../assets/fonts/Fredoka_Expanded-Light.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		7F169671E18F4E69A063C347 /* Fredoka_Expanded-Medium.ttf */ = {isa = PBXFileReference; name = "Fredoka_Expanded-Medium.ttf"; path = "../assets/fonts/Fredoka_Expanded-Medium.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		8264A23145564DAAB46E50A7 /* Fredoka_Expanded-Regular.ttf */ = {isa = PBXFileReference; name = "Fredoka_Expanded-Regular.ttf"; path = "../assets/fonts/Fredoka_Expanded-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		58B464F72F7948DF846E8550 /* Fredoka_Expanded-SemiBold.ttf */ = {isa = PBXFileReference; name = "Fredoka_Expanded-SemiBold.ttf"; path = "../assets/fonts/Fredoka_Expanded-SemiBold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		17E9D8B44DF641A5851786C6 /* Fredoka_SemiCondensed-Bold.ttf */ = {isa = PBXFileReference; name = "Fredoka_SemiCondensed-Bold.ttf"; path = "../assets/fonts/Fredoka_SemiCondensed-Bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		AC0A2207FC8F4A4E89DDE580 /* Fredoka_SemiCondensed-Light.ttf */ = {isa = PBXFileReference; name = "Fredoka_SemiCondensed-Light.ttf"; path = "../assets/fonts/Fredoka_SemiCondensed-Light.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		26161BFB7893444FA2A9648B /* Fredoka_SemiCondensed-Medium.ttf */ = {isa = PBXFileReference; name = "Fredoka_SemiCondensed-Medium.ttf"; path = "../assets/fonts/Fredoka_SemiCondensed-Medium.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		EDF3FB5E2C234E63AE4AF4C9 /* Fredoka_SemiCondensed-Regular.ttf */ = {isa = PBXFileReference; name = "Fredoka_SemiCondensed-Regular.ttf"; path = "../assets/fonts/Fredoka_SemiCondensed-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		9371D1C5B84A4C67B897FA0A /* Fredoka_SemiCondensed-SemiBold.ttf */ = {isa = PBXFileReference; name = "Fredoka_SemiCondensed-SemiBold.ttf"; path = "../assets/fonts/Fredoka_SemiCondensed-SemiBold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		DF31E292B97D417D9D7B54AF /* Fredoka_SemiExpanded-Bold.ttf */ = {isa = PBXFileReference; name = "Fredoka_SemiExpanded-Bold.ttf"; path = "../assets/fonts/Fredoka_SemiExpanded-Bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		F18ED91ED28249E593FA744D /* Fredoka_SemiExpanded-Light.ttf */ = {isa = PBXFileReference; name = "Fredoka_SemiExpanded-Light.ttf"; path = "../assets/fonts/Fredoka_SemiExpanded-Light.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		6979613811D9411D8EF760CF /* Fredoka_SemiExpanded-Medium.ttf */ = {isa = PBXFileReference; name = "Fredoka_SemiExpanded-Medium.ttf"; path = "../assets/fonts/Fredoka_SemiExpanded-Medium.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		758914EE77324712956AA4AC /* Fredoka_SemiExpanded-Regular.ttf */ = {isa = PBXFileReference; name = "Fredoka_SemiExpanded-Regular.ttf"; path = "../assets/fonts/Fredoka_SemiExpanded-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		77004D179ABA4F28B3BFCB18 /* Fredoka_SemiExpanded-SemiBold.ttf */ = {isa = PBXFileReference; name = "Fredoka_SemiExpanded-SemiBold.ttf"; path = "../assets/fonts/Fredoka_SemiExpanded-SemiBold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,7 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0C80B921A6F3F58F76C31292 /* libPods-fishingApp.a in Frameworks */,
+				9A005F2A1423745BDC5841A5 /* libPods-fishingApp.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -55,7 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
-				5DCACB8F33CDC322A6C60F78 /* libPods-fishingApp.a */,
+				D3958DDC4F7E5CA37ED03E55 /* libPods-fishingApp.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -75,6 +129,7 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				BBD78D7AC51CEA395F1C20DB /* Pods */,
+				C71CEE4250BD471EA056B5AA /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -92,11 +147,46 @@
 		BBD78D7AC51CEA395F1C20DB /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				3B4392A12AC88292D35C810B /* Pods-fishingApp.debug.xcconfig */,
-				5709B34CF0A7D63546082F79 /* Pods-fishingApp.release.xcconfig */,
+				208B9F60B0C1F2006EDF7A14 /* Pods-fishingApp.debug.xcconfig */,
+				50A1EE883BC9A429AB7883EF /* Pods-fishingApp.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
+		};
+		C71CEE4250BD471EA056B5AA /* Resources */ = {
+			isa = "PBXGroup";
+			children = (
+				A8081DC484AA472B86D2667F /* Kelomang-zrXlL.otf */,
+				0511D5FB90B945BAA6F8A88D /* Fredoka-Bold.ttf */,
+				CBADFF97F94744D390F86E2C /* Fredoka-Light.ttf */,
+				C013724A199045D9976C049A /* Fredoka-Medium.ttf */,
+				97B2F7609B754A64A5A34437 /* Fredoka-Regular.ttf */,
+				67FF6DB581A34F3D95E90FE1 /* Fredoka-SemiBold.ttf */,
+				5F277A3964B74F6A9B1C1A54 /* Fredoka-VariableFont_wdth,wght.ttf */,
+				872AB9BBF54441238CA2CC1C /* Fredoka_Condensed-Bold.ttf */,
+				8BB2A38A828A427A9097A2E8 /* Fredoka_Condensed-Light.ttf */,
+				D80B22686C1043309DA07D32 /* Fredoka_Condensed-Medium.ttf */,
+				E3F3719330CA4622AA8666D4 /* Fredoka_Condensed-Regular.ttf */,
+				E98E4F4B7B93497D9A96DA86 /* Fredoka_Condensed-SemiBold.ttf */,
+				DDCA8D10DE4C40759C1B1645 /* Fredoka_Expanded-Bold.ttf */,
+				0052406C033F4942B12A255F /* Fredoka_Expanded-Light.ttf */,
+				7F169671E18F4E69A063C347 /* Fredoka_Expanded-Medium.ttf */,
+				8264A23145564DAAB46E50A7 /* Fredoka_Expanded-Regular.ttf */,
+				58B464F72F7948DF846E8550 /* Fredoka_Expanded-SemiBold.ttf */,
+				17E9D8B44DF641A5851786C6 /* Fredoka_SemiCondensed-Bold.ttf */,
+				AC0A2207FC8F4A4E89DDE580 /* Fredoka_SemiCondensed-Light.ttf */,
+				26161BFB7893444FA2A9648B /* Fredoka_SemiCondensed-Medium.ttf */,
+				EDF3FB5E2C234E63AE4AF4C9 /* Fredoka_SemiCondensed-Regular.ttf */,
+				9371D1C5B84A4C67B897FA0A /* Fredoka_SemiCondensed-SemiBold.ttf */,
+				DF31E292B97D417D9D7B54AF /* Fredoka_SemiExpanded-Bold.ttf */,
+				F18ED91ED28249E593FA744D /* Fredoka_SemiExpanded-Light.ttf */,
+				6979613811D9411D8EF760CF /* Fredoka_SemiExpanded-Medium.ttf */,
+				758914EE77324712956AA4AC /* Fredoka_SemiExpanded-Regular.ttf */,
+				77004D179ABA4F28B3BFCB18 /* Fredoka_SemiExpanded-SemiBold.ttf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+			path = "";
 		};
 /* End PBXGroup section */
 
@@ -105,13 +195,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "fishingApp" */;
 			buildPhases = (
-				C38B50BA6285516D6DCD4F65 /* [CP] Check Pods Manifest.lock */,
+				9BBCF17D22F4F69A2F079BBA /* [CP] Check Pods Manifest.lock */,
 				13B07F871A680F5B00A75B9A /* Sources */,
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
-				00EEFC60759A1932668264C0 /* [CP] Embed Pods Frameworks */,
-				E235C05ADACE081382539298 /* [CP] Copy Pods Resources */,
+				D5B80A36640E1833113630AE /* [CP] Embed Pods Frameworks */,
+				8832E77303813CE4BA7B2EB3 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -161,6 +251,33 @@
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				0E2C7B57EF401C15CBAF8F0B /* PrivacyInfo.xcprivacy in Resources */,
+				2C02C0DC966C4ED49968D5FD /* Kelomang-zrXlL.otf in Resources */,
+				CD0638E606584AC9AC3C43FC /* Fredoka-Bold.ttf in Resources */,
+				27D0DB1B81EB4C0A8F24BACD /* Fredoka-Light.ttf in Resources */,
+				1038230C1303451EA4EF6C4D /* Fredoka-Medium.ttf in Resources */,
+				7059DC7975A649BEA12EFB4D /* Fredoka-Regular.ttf in Resources */,
+				7D544D36183F47D588544F9E /* Fredoka-SemiBold.ttf in Resources */,
+				D262152F879742449F41D756 /* Fredoka-VariableFont_wdth,wght.ttf in Resources */,
+				CFF35E4EE9F54732BE468A96 /* Fredoka_Condensed-Bold.ttf in Resources */,
+				1CE934B8D3E249DD80D2D5B7 /* Fredoka_Condensed-Light.ttf in Resources */,
+				FE38FBF497594E7DBEAEB175 /* Fredoka_Condensed-Medium.ttf in Resources */,
+				77191D4FF55044E0ACA1FFFB /* Fredoka_Condensed-Regular.ttf in Resources */,
+				D244AC9AB2394D738FF667B3 /* Fredoka_Condensed-SemiBold.ttf in Resources */,
+				A423A1B54AC745BB87DDFFFA /* Fredoka_Expanded-Bold.ttf in Resources */,
+				EF0148F82C5E4DC897C87960 /* Fredoka_Expanded-Light.ttf in Resources */,
+				50D662C77FF94137BC3220E3 /* Fredoka_Expanded-Medium.ttf in Resources */,
+				8032A0AB700D4704AC8CCEC5 /* Fredoka_Expanded-Regular.ttf in Resources */,
+				9051C23B4AAF45B78AA13167 /* Fredoka_Expanded-SemiBold.ttf in Resources */,
+				8D6D4B27ED7C44E6BD5C8DED /* Fredoka_SemiCondensed-Bold.ttf in Resources */,
+				360220CD60CE48969C9F778F /* Fredoka_SemiCondensed-Light.ttf in Resources */,
+				A817B6A5EED44959BA614561 /* Fredoka_SemiCondensed-Medium.ttf in Resources */,
+				4D5E1A6C917C4544BE7698A8 /* Fredoka_SemiCondensed-Regular.ttf in Resources */,
+				D9300F896C364FA985EBF756 /* Fredoka_SemiCondensed-SemiBold.ttf in Resources */,
+				6768E8CBB9D645EB87F88C95 /* Fredoka_SemiExpanded-Bold.ttf in Resources */,
+				552DE779C2C64D4B885393A4 /* Fredoka_SemiExpanded-Light.ttf in Resources */,
+				A8FE5E1565674683A58F4F92 /* Fredoka_SemiExpanded-Medium.ttf in Resources */,
+				03AEC4BA472E4BEBB1376471 /* Fredoka_SemiExpanded-Regular.ttf in Resources */,
+				94B1F6972FC84BA1BDD3799E /* Fredoka_SemiExpanded-SemiBold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -183,24 +300,24 @@
 			shellPath = /bin/sh;
 			shellScript = "set -e\n\nWITH_ENVIRONMENT=\"$REACT_NATIVE_PATH/scripts/xcode/with-environment.sh\"\nREACT_NATIVE_XCODE=\"$REACT_NATIVE_PATH/scripts/react-native-xcode.sh\"\n\n/bin/sh -c \"$WITH_ENVIRONMENT $REACT_NATIVE_XCODE\"\n";
 		};
-		00EEFC60759A1932668264C0 /* [CP] Embed Pods Frameworks */ = {
+		8832E77303813CE4BA7B2EB3 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-fishingApp/Pods-fishingApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-fishingApp/Pods-fishingApp-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			name = "[CP] Embed Pods Frameworks";
+			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-fishingApp/Pods-fishingApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-fishingApp/Pods-fishingApp-resources-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-fishingApp/Pods-fishingApp-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-fishingApp/Pods-fishingApp-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		C38B50BA6285516D6DCD4F65 /* [CP] Check Pods Manifest.lock */ = {
+		9BBCF17D22F4F69A2F079BBA /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -222,21 +339,21 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		E235C05ADACE081382539298 /* [CP] Copy Pods Resources */ = {
+		D5B80A36640E1833113630AE /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-fishingApp/Pods-fishingApp-resources-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-fishingApp/Pods-fishingApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			name = "[CP] Copy Pods Resources";
+			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-fishingApp/Pods-fishingApp-resources-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-fishingApp/Pods-fishingApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-fishingApp/Pods-fishingApp-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-fishingApp/Pods-fishingApp-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -255,7 +372,7 @@
 /* Begin XCBuildConfiguration section */
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3B4392A12AC88292D35C810B /* Pods-fishingApp.debug.xcconfig */;
+			baseConfigurationReference = 208B9F60B0C1F2006EDF7A14 /* Pods-fishingApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -283,7 +400,7 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5709B34CF0A7D63546082F79 /* Pods-fishingApp.release.xcconfig */;
+			baseConfigurationReference = 50A1EE883BC9A429AB7883EF /* Pods-fishingApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -311,6 +428,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CC = "";
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "c++20";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -338,6 +456,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				CXX = "";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "";
@@ -357,6 +476,8 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
+				LD = "";
+				LDPLUSPLUS = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					/usr/lib/swift,
 					"$(inherited)",
@@ -391,6 +512,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CC = "";
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "c++20";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -418,6 +540,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
+				CXX = "";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "";
@@ -430,6 +553,8 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
+				LD = "";
+				LDPLUSPLUS = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					/usr/lib/swift,
 					"$(inherited)",

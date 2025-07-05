@@ -1,12 +1,12 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- */
-
-import { NewAppScreen } from '@react-native/new-app-screen';
+import React from 'react';
 import { StatusBar, StyleSheet, useColorScheme, View } from 'react-native';
+import HomeScreen from './screens/HomeScreen'; 
+// import { Asset } from 'expo-asset';
+
+// const loadFonts = async () => {
+//   await Asset.loadAsync(require('./assets/fonts/Fredoka-Regular.ttf'));
+// };
+// loadFonts().then(() => console.log('Fonts loaded'));
 
 function App() {
   const isDarkMode = useColorScheme() === 'dark';
@@ -14,7 +14,7 @@ function App() {
   return (
     <View style={styles.container}>
       <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
-      <NewAppScreen templateFileName="App.tsx" />
+      <HomeScreen /> {/* Render the HomeScreen component */}
     </View>
   );
 }
@@ -22,6 +22,7 @@ function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    alignContent: 'center',
   },
 });
 
