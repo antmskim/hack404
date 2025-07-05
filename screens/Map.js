@@ -39,16 +39,36 @@ const Map = () => {
                 </Text>
             <Text style={globalStyles.textBody}>
                 In Zone {currentZone}, familiar species like walleye, bass, pike, and trout are regulated closely. Here's what you need to know before you cast:
-                Walleye & sauger: Max of 4/day, with only 1 allowed over 46 cm
-                Largemouth & smallmouth bass: Up to 6, each must be ≥ 35 cm
-                Northern pike: Up to 6 daily (no more than 2 over 61 cm, and only 1 over 86 cm)
-                Muskellunge: 1 per day, and must be > 91 cm
-                Yellow perch: Up to 50, each must be ≥ 25 cm
-                Black & white crappie: Up to 30, all must be ≥ 25 cm
-                Sunfish: Up to 50, each must be ≥ 15 cm
-                Brook/brown/rainbow trout: Brook (5, 30 cm max one), Brown (5, 55 cm max one), Rainbow (5, 55 cm max one)
-                Lake trout: Up to 3/day, but only 1 between 33–40 cm (rest outside this range)
                 </Text>
+            <View style={styles.textContainer}>
+                <Text style={globalStyles.textBody}>
+                    Walleye & sauger: Max of 4/day, with only 1 allowed over 46 cm
+                    </Text>
+                <Text style={globalStyles.textBody}>
+                    Largemouth & smallmouth bass: Up to 6, each must be ≥ 35 cm
+                    </Text>
+                <Text style={globalStyles.textBody}>
+                    Northern pike: Up to 6 daily (no more than 2 over 61 cm, and only 1 over 86 cm)
+                    </Text>
+                <Text style={globalStyles.textBody}>
+                    Muskellunge: 1 per day, and must be {'>'} 91 cm
+                    </Text>
+                <Text style={globalStyles.textBody}>
+                    Yellow perch: Up to 50, each must be ≥ 25 cm
+                    </Text>
+                <Text style={globalStyles.textBody}>
+                    Black & white crappie: Up to 30, all must be ≥ 25 cm
+                    </Text>
+                <Text style={globalStyles.textBody}>
+                    Sunfish: Up to 50, each must be ≥ 15 cm
+                    </Text>
+                <Text style={globalStyles.textBody}>
+                    Brook/brown/rainbow trout: Brook (5, 30 cm max one), Brown (5, 55 cm max one), Rainbow (5, 55 cm max one)
+                    </Text>
+                <Text style={globalStyles.textBody}>
+                    Lake trout: Up to 3/day, but only 1 between 33–40 cm (rest outside this range)
+                    </Text>
+                </View>
             </View>
         </ScrollView>
         <View style={globalStyles.navContainer}>
@@ -59,6 +79,10 @@ const Map = () => {
 };
 
 const styles = StyleSheet.create({
+  textContainer: {
+    gap: spacing.sm,
+    flex: 1,
+  },
   horizontalContainer: {
     flexDirection: 'row',
     alignItems: 'center',
