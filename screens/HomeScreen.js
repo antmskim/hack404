@@ -33,13 +33,18 @@ const HomeScreen = () => {
             <ButtonXL title="Check Zone"/>
             </View>
             </View>
-        <ScrollView 
-          horizontal={true}
-          contentContainerStyle={styles.cardRow}>
-          <FishCard />
-          <FishCard />
-          <FishCard />
-        </ScrollView>
+        <View style={globalStyles.container}>
+          <Text style={globalStyles.h2}>
+            Recent Catches
+            </Text>
+          <ScrollView 
+            horizontal={true}
+            contentContainerStyle={styles.cardRow}>
+            <FishCard />
+            <FishCard />
+            <FishCard />
+            </ScrollView>
+          </View>
         </ScrollView>
         <View style={styles.navContainer}>
           <NavBar />
@@ -54,11 +59,12 @@ const styles = StyleSheet.create({
     bottom: 0,
     left: 0,
     right: 0,
-    zIndex: 1, // Ensure the nav bar is above other content
+    zIndex: 999999, // Ensure the nav bar is above other content
   },
   cardRow: {
+
     flexDirection: 'row',
-    overflow: 'hidden',
+    overflow: 'visible',
     gap: spacing.sm,
   },
   buttonRow: {
@@ -72,10 +78,6 @@ const styles = StyleSheet.create({
     flexShrink: 1,
     flexGrow: 0,
     gap: spacing.md,
-  },
-  container: {
-    flex: 1,
-    alignContent: 'center',
   },
   map: {
     height: 175,

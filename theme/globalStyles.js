@@ -24,13 +24,14 @@ export default StyleSheet.create({
   pageContainer: {
     paddingHorizontal: spacing.xl,
     paddingVertical: spacing.xxl,
+    paddingBottom: 144,
     backgroundColor: colors.background,
-    gap: 28,
+    gap: spacing.xl,
+    overflow: 'visible',
   },
   container: {
     flex: 1,
-    padding: spacing.md,
-    backgroundColor: colors.background,
+    gap: spacing.md,
   }
   // ... other global text styles
 });
