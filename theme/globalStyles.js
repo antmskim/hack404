@@ -22,7 +22,6 @@ export default StyleSheet.create({
     color: colors.text,
   },
   pageContainer: {
-    flex: 1,
     paddingHorizontal: spacing.xl,
     paddingVertical: spacing.xxl,
     backgroundColor: colors.background,

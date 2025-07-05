@@ -1,12 +1,6 @@
 import React from 'react';
 import { StatusBar, StyleSheet, useColorScheme, View } from 'react-native';
 import HomeScreen from './screens/HomeScreen'; 
-// import { Asset } from 'expo-asset';
-
-// const loadFonts = async () => {
-//   await Asset.loadAsync(require('./assets/fonts/Fredoka-Regular.ttf'));
-// };
-// loadFonts().then(() => console.log('Fonts loaded'));
 
 function App() {
   const isDarkMode = useColorScheme() === 'dark';
