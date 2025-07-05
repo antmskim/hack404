@@ -29,6 +29,13 @@ export default StyleSheet.create({
     gap: spacing.xl,
     overflow: 'visible',
   },
+    navContainer: {
+    position: 'absolute',
+    bottom: 0,
+    left: 0,
+    right: 0,
+    zIndex: 999999, // Ensure the nav bar is above other content
+  },
   container: {
     flex: 1,
     gap: spacing.md,

@@ -11,6 +11,7 @@ import NavBar from '../components/navBar'; // Import the navigation bar componen
 
 const HomeScreen = () => {
   let currentZone = 3;
+  
   return (
     <View style={{ flex: 1 }}>
       <ScrollView
@@ -62,7 +63,6 @@ const styles = StyleSheet.create({
     zIndex: 999999, // Ensure the nav bar is above other content
   },
   cardRow: {
-
     flexDirection: 'row',
     overflow: 'visible',
     gap: spacing.sm,
