@@ -153,14 +153,6 @@ const styles = StyleSheet.create({
     height: 36, 
     backgroundColor: colors.neutral.darkGrey, 
   },
-  map: {
-    width: '100%',
-    height: 440,
-    backgroundColor: colors.neutral.darkGrey,
-    borderRadius: 16,
-    borderWidth: 3,
-    borderColor: colors.secondaryAccent.teal,
-  }
 });
 
 export default Scan;

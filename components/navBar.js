@@ -10,15 +10,15 @@ const NavBar = () => {
   const navItems = [
     {
       label: "Home",
-      left: 27,
+      left: 28,
     },
     {
       label: "Zone",
-      left: 89,
+      left: 88,
     },
     {
-      label: "FishDex",
-      left: 269,
+      label: "Dex",
+      left: 268,
     },
     {
       label: "Profile",
@@ -71,7 +71,7 @@ const styles = StyleSheet.create({
   },
   navItem: {
     position: 'absolute',
-    top: 19,
+    top: 16,
     alignItems: 'center',
   },
   iconPlaceholder: {
@@ -82,7 +82,7 @@ const styles = StyleSheet.create({
   },
   label: {
     position: 'absolute',
-    top: 51,
+    top: 52,
     color: colors.neutral.white,
     ...typography.bodySmall,
   },
