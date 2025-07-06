@@ -14,8 +14,6 @@ const Logo = () => {
       <Text style={globalStyles.h1}>
         FishKeeper
         </Text>
-      <View style={styles.imagePlaceholder}>
-        </View>
     </View>
   );
 };

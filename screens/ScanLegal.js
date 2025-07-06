@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, View, ScrollView } from 'react-native';
+import { StyleSheet, Text, View, ScrollView, Image } from 'react-native';
 import globalStyles from '../theme/globalStyles'; // Import global styles
 import { colors } from '../theme/colors.js'; // Import colors
 import { spacing } from '../theme/spacing.js'; // Import spacing
@@ -8,11 +8,32 @@ import Logo from '../components/Logo'; // Import the new Logo component
 import NavBar from '../components/navBar'; // Import the navigation bar component
 import ButtonFillLG from '../components/buttonFillLG.js'; // Import the large button component
 import ButtonOutlineLG from '../components/buttonOutlineLG.js'; // Import the outline button component
-import ButtonFillMD from '../components/buttonFillMD.js';
-import { Button } from 'react-native/types_generated/index';
 
-const ScanLegal = () => {
-    let fishName = "Largemouth Bass";
+
+
+import AsyncStorage from '@react-native-async-storage/async-storage';
+
+const ScanLegal = ({ route, navigation }) => {
+    const { reason, imageUri } = route.params;
+    
+    // Extract fish name from the reason
+    const fishNameMatch = reason.match(/legal to keep (a|an) (.*?) in/);
+    const fishName = fishNameMatch ? fishNameMatch[2] : "Unknown Fish";
+
+    const saveToFishDex = async () => {
+        try {
+            const newFish = { imageUri, reason, timestamp: new Date().toISOString() };
+            const existingFish = await AsyncStorage.getItem('fishDex');
+            const fishDex = existingFish ? JSON.parse(existingFish) : [];
+            fishDex.push(newFish);
+            await AsyncStorage.setItem('fishDex', JSON.stringify(fishDex));
+            Alert.alert('Success', 'Fish added to FishDex!');
+            navigation.navigate('Dex'); // Navigate to Dex screen after saving
+        } catch (e) {
+            console.error('Failed to save fish to FishDex', e);
+            Alert.alert('Error', 'Failed to add fish to FishDex.');
+        }
+    };
 
   return (
     <View style={{ flex: 1 }}>
@@ -26,65 +47,19 @@ const ScanLegal = () => {
             </Text>
         
         <View style={styles.scannedContainer}>
-            <View style={styles.imagePlaceholder} />
-            </View>
+            <Image source={{ uri: imageUri }} style={styles.scannedImage} />
+        </View>
 
         <View style={[styles.textContainer, { gap: spacing.md }]}>
             <Text style={globalStyles.textBody}>
-                This catch is legal and safe to keep based on your current zone and the species’ size, season, and limits.
-                </Text>
-
-            <View style={styles.textContainerTight}>
-                <Text style={globalStyles.textBody}>
-                    ✔ In Season
-                    </Text>
-                <Text style={globalStyles.textBody}>
-                    ✔ Meets Size Requirements
-                    </Text>
-                <Text style={globalStyles.textBody}>
-                    ✔ Within Your Daily Limit
-                    </Text>
-            </View>
+                {reason}
+            </Text>
         </View>
         
-        <View style={[styles.textContainer, { gap: spacing.md }]}>
-            <Text style={[globalStyles.h2, { textDecorationLine: 'underline' }]}>
-                {fishName}
-                </Text>
-            <Text style={globalStyles.textBody}>
-                You’ve caught a {fishName}! Known for its powerful fight and wide mouth, this popular freshwater fish thrives in warm, weedy lakes.
-                </Text>
-            <View style={styles.textContainerTight}>
-                <Text style={globalStyles.h3}>
-                    📏 Size Limits
-                    </Text>
-                <Text style={globalStyles.textBody}>
-                    Minimum size: 35 cm (13.8 in) — any bass must meet or exceed this length to be kept
-                    </Text>
-                </View>
-            <View style={styles.textContainerTight}>
-                <Text style={globalStyles.h3}>
-                    🗓️ Season Dates
-                    </Text>
-                <Text style={globalStyles.textBody}>
-                    Open season for harvest: All year{"\n"}
-                    Special early-season rules (Jan 1–May 10):{"\n"}
-                    Catch-and-release only during this period — no harvesting allowed{"\n"}
-                    </Text>
-                </View>
-            <View style={styles.textContainerTight}>
-                <Text style={globalStyles.h3}>
-                    🎣 Daily & Possession Limits
-                    </Text>
-                <Text style={globalStyles.textBody}>
-                    Annual catch limit: Up to 6 bass per person{"\n"}
-                    Possession limit: No more than 2 bass over 35 cm at any time{"\n"}
-                    </Text>
-                </View>
-            <View style={styles.horizontalContainer}>
-                <ButtonFillMD text="Add to FishDex 🎴" />
-                </View>
-            </View>
+        <View style={[globalStyles.container, { gap: spacing.sm }]}>
+            <ButtonFillLG showIconPlaceholder={false} backgroundColor={colors.primary.yellow} text="Add to FishDex" onPress={saveToFishDex}/>
+            <ButtonFillLG showIconPlaceholder={false} backgroundColor={colors.primary.blue} text="Scan Another Fish" onPress={() => navigation.navigate('Scan')}/>
+        </View>
 
         </ScrollView>
         <View style={globalStyles.navContainer}>
@@ -116,6 +91,11 @@ const styles = StyleSheet.create({
     borderColor: colors.secondaryAccent.teal,
     position: 'relative',
     backgroundColor: colors.neutral.darkGrey,
+  },
+  scannedImage: {
+    width: '100%',
+    height: '100%',
+    resizeMode: 'cover',
   },
   textContainer: {
     gap: spacing.sm,

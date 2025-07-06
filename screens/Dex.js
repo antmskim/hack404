@@ -1,15 +1,24 @@
-import React from 'react';
-import { StyleSheet, Text, View, ScrollView } from 'react-native';
-import globalStyles from '../theme/globalStyles.js'; // Import global styles
-import { colors } from '../theme/colors.js'; // Import colors
-import { spacing } from '../theme/spacing.js'; // Import spacing
-import { typography } from '../theme/typography.js'; // Import typography
-import Logo from '../components/Logo.js'; // Import the new Logo component
-import ButtonXL from '../components/buttonXL.js'; // Import the button component
-import FishCard from '../components/fishCard.js'; // Import the fish card component
-import NavBar from '../components/navBar.js'; // Import the navigation bar component
+import React, { useEffect, useState } from 'react';
+import { StyleSheet, Text, View, ScrollView, Image } from 'react-native';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 const Dex = ({ navigation }) => {
+  const [fishDex, setFishDex] = useState([]);
+
+  useEffect(() => {
+    const loadFishDex = async () => {
+      try {
+        const storedFish = await AsyncStorage.getItem('fishDex');
+        if (storedFish) {
+          setFishDex(JSON.parse(storedFish));
+        }
+      } catch (e) {
+        console.error('Failed to load fish dex', e);
+      }
+    };
+
+    loadFishDex();
+  }, []);
 
   return (
     <View style={{ flex: 1 }}>
@@ -23,23 +32,21 @@ const Dex = ({ navigation }) => {
         </Text>
 
         <View style={[globalStyles.container, { gap : spacing.lg }]}>
-            <View style={styles.horizontalContainer}>
-              <FishCard />
-              <FishCard />
+          {fishDex.length > 0 ? (
+            fishDex.map((fish, index) => (
+              <View key={index} style={styles.fishEntryContainer}>
+                <Image source={{ uri: fish.imageUri }} style={styles.fishImage} />
+                <Text style={styles.fishReasonText}>{fish.reason}</Text>
               </View>
-            <View style={styles.horizontalContainer}>
-              <FishCard />
-              <FishCard />
-              </View>
-            <View style={styles.horizontalContainer}>
-              <FishCard />
-              <FishCard />
-              </View>
-          </View>
-        </ScrollView>
-        <View style={styles.navContainer}>
-          <NavBar navigation={navigation} />
+            ))
+          ) : (
+            <Text style={styles.noFishText}>No fish added to your FishDex yet!</Text>
+          )}
         </View>
+      </ScrollView>
+      <View style={styles.navContainer}>
+        <NavBar navigation={navigation} />
+      </View>
     </View>
   );
 };
@@ -52,6 +59,32 @@ const styles = StyleSheet.create({
     right: 0,
     zIndex: 999999, // Ensure the nav bar is above other content
   },
+  fishEntryContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginBottom: spacing.md,
+    backgroundColor: colors.neutral.lightGrey,
+    borderRadius: 8,
+    padding: spacing.sm,
+  },
+  fishImage: {
+    width: 80,
+    height: 80,
+    borderRadius: 4,
+    marginRight: spacing.sm,
+  },
+  fishReasonText: {
+    flex: 1,
+    ...typography.body,
+    color: colors.text,
+  },
+  noFishText: {
+    ...typography.body,
+    textAlign: 'center',
+    marginTop: spacing.xl,
+    color: colors.text,
+  },
+  // ... other styles
   cardRow: {
     flexDirection: 'row',
     overflow: 'visible',

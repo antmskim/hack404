@@ -8,8 +8,6 @@ import { TouchableOpacity, Text, View, StyleSheet } from 'react-native';
 const ButtonXL = ({ title, onPress }) => {
   return (
     <TouchableOpacity style={styles.button} onPress={onPress}>
-      <View style={styles.imagePlaceholder}>
-      </View>
       <Text style={globalStyles.buttonText}>{title}</Text>
     </TouchableOpacity>
   );

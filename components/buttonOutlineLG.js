@@ -8,7 +8,6 @@ import { typography } from '../theme/typography';
 const ButtonFillLG = ({ 
   onPress, 
   text, 
-  showIconPlaceholder = true,
   backgroundColor = colors.neutral.white, 
   textColor = colors.secondaryAccent.teal
 }) => {
@@ -19,9 +18,6 @@ const ButtonFillLG = ({
       activeOpacity={0.7}
     >
       <View style={styles.buttonContent}>
-        {showIconPlaceholder && (
-          <View style={styles.iconPlaceholder} />
-        )}
         <Text style={[globalStyles.buttonTextLight, { color: textColor }]}>
           {text}
         </Text>

@@ -1,15 +1,16 @@
 import React, { useState } from 'react';
-import { StyleSheet, Text, View, ScrollView, Alert, Image } from 'react-native';
+import { StyleSheet, Text, View, ScrollView, Alert, Image, TouchableOpacity, Platform } from 'react-native';
 import { launchCamera, launchImageLibrary } from 'react-native-image-picker';
+import RNFS from 'react-native-fs';
 
-import globalStyles from '../theme/globalStyles'; // Import global styles
-import { colors } from '../theme/colors.js'; // Import colors
-import { spacing } from '../theme/spacing.js'; // Import spacing
-import { typography } from '../theme/typography.js'; // Import typography
-import Logo from '../components/Logo'; // Import the new Logo component
-import NavBar from '../components/navBar'; // Import the navigation bar component
-import ButtonFillLG from '../components/buttonFillLG.js'; // Import the large button component
-import ButtonOutlineLG from '../components/buttonOutlineLG.js'; // Import the outline button component
+import globalStyles from '../theme/globalStyles';
+import { colors } from '../theme/colors.js';
+import { spacing } from '../theme/spacing.js';
+import { typography } from '../theme/typography.js';
+import Logo from '../components/Logo';
+import NavBar from '../components/navBar';
+import ButtonFillLG from '../components/buttonFillLG.js';
+import ButtonOutlineLG from '../components/buttonOutlineLG.js';
 
 const Scan = ({ navigation }) => {
   const [selectedImageUri, setSelectedImageUri] = useState(null);
@@ -70,6 +71,52 @@ const Scan = ({ navigation }) => {
     }
   };
 
+  async function getFishLegality(imageUri) {
+    let base64Image;
+    if (Platform.OS === 'ios') {
+      base64Image = await RNFS.readFile(imageUri.replace('file://', ''), 'base64');
+    } else {
+      base64Image = await RNFS.readFile(imageUri, 'base64');
+    }
+    console.log('Base64 image generated. Length:', base64Image.length);
+
+    const backendEndpoint = 'http://localhost:3000/scan-fish';
+
+    try {
+      console.log('Sending image data to backend:', backendEndpoint);
+      const response = await fetch(backendEndpoint, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ imageData: base64Image }),
+      });
+
+      if (!response.ok) {
+        const errorText = await response.text();
+        throw new Error(`HTTP error! status: ${response.status}, body: ${errorText}`);
+      }
+
+      const data = await response.json();
+      return data;
+    } catch (error) {
+      console.error('Backend API error:', error);
+      return { legal: null, reason: 'Backend API error' };
+    }
+  }
+
+  const handleDone = async () => {
+    if (!selectedImageUri) return;
+    const result = await getFishLegality(selectedImageUri);
+    if (result.legal === true) {
+      navigation.navigate('ScanLegal', { reason: result.reason, imageUri: selectedImageUri });
+    } else if (result.legal === false) {
+      navigation.navigate('ScanIllegal', { reason: result.reason, imageUri: selectedImageUri });
+    } else {
+      Alert.alert('Could not determine legality', result.reason);
+    }
+  };
+
   return (
     <View style={{ flex: 1 }}>
       <ScrollView
@@ -77,25 +124,32 @@ const Scan = ({ navigation }) => {
         contentContainerStyle={globalStyles.pageContainer}>
         <Logo />
         
-        <Text style={globalStyles.h2}>
-            Scan Your Fish
-            </Text>
+        <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', marginBottom: spacing.sm }}>
+          <Text style={globalStyles.h2}>Scan Your Fish</Text>
+          {selectedImageUri && (
+            <TouchableOpacity
+              style={[styles.doneButton, { backgroundColor: colors.secondaryAccent.teal }]}
+              onPress={handleDone}
+            >
+              <Text style={styles.doneButtonText}>Scan</Text>
+            </TouchableOpacity>
+          )}
+        </View>
         
         <View style={[styles.scanContainer, selectedImageUri && styles.scanContainerFilled]}>
             {selectedImageUri ? (
               <Image source={{ uri: selectedImageUri }} style={styles.scannedImage} />
             ) : (
               <>
-                <View style={styles.iconPlaceholder} />
                 <Text style={[globalStyles.h2, { textAlign: 'center' }]}>
-                    Identify Your Fish
+                    📸 Identify Your Fish
                 </Text>
                 <Text style={[globalStyles.textBody, { textAlign: 'center' }]}>
                     Take a photo or upload an image to identify your catch.
                 </Text>
               </>
             )}
-            </View>
+        </View>
 
         <View style={globalStyles.container}>
             <ButtonFillLG text="Take Photo" onPress={takePhoto}/>
@@ -111,11 +165,6 @@ const Scan = ({ navigation }) => {
 };
 
 const styles = StyleSheet.create({
-  iconPlaceholder: {
-    width: 64,
-    height: 64,
-    backgroundColor: colors.neutral.darkGrey,
-  },
   scanContainer: {
     flex: 1,
     flexDirection: 'column',
@@ -127,31 +176,31 @@ const styles = StyleSheet.create({
     borderWidth: 1.5,
     borderRadius: 16, 
     borderColor: colors.secondaryAccent.teal,
-    overflow: 'hidden', // Clip content that overflows
+    overflow: 'hidden',
   },
   scanContainerFilled: {
-    padding: 0, // Remove padding when filled
-    justifyContent: 'flex-start', // Align image to top
+    padding: 0,
+    justifyContent: 'flex-start',
   },
   scannedImage: {
     width: '100%',
     height: '100%',
     borderRadius: 16,
-    resizeMode: 'cover', // Cover the entire area
+    resizeMode: 'cover',
   },
-  textContainer: {
-    gap: spacing.sm,
-    flex: 1,
-  },
-  horizontalContainer: {
-    flexDirection: 'row',
+  doneButton: {
+    marginLeft: 8,
+    paddingVertical: 6,
+    paddingHorizontal: 14,
+    borderRadius: 8,
+    justifyContent: 'center',
     alignItems: 'center',
-    gap: spacing.sm,
+    height: 36,
   },
-  imagePlaceholder: {
-    width: 36, 
-    height: 36, 
-    backgroundColor: colors.neutral.darkGrey, 
+  doneButtonText: {
+    color: 'white',
+    fontSize: 14,
+    fontWeight: 'bold',
   },
 });
 

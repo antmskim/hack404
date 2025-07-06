@@ -22,9 +22,6 @@ const Collectible = () => {
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
             porta finibus massa ut sodales.
           </Text>
-
-          {/* Image Placeholder */}
-          <View style={styles.imagePlaceholder} />
         </View>
     </View>
   );
@@ -79,14 +76,6 @@ const styles = StyleSheet.create({
     color: colors.black,
     lineHeight: 12,
     marginVertical: spacing.xs,
-  },
-  imagePlaceholder: {
-    width: 100,
-    height: 72,
-    borderRadius: 4,
-    borderWidth: 1,
-    backgroundColor: colors.neutral.darkGrey,
-    borderColor: colors.secondaryAccent.purple,
   },
 });
 
