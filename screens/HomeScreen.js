@@ -9,7 +9,7 @@ import ButtonXL from '../components/buttonXL'; // Import the button component
 import FishCard from '../components/fishCard'; // Import the fish card component
 import NavBar from '../components/navBar'; // Import the navigation bar component
 
-const HomeScreen = () => {
+const HomeScreen = ({ navigation }) => {
   let currentZone = 3;
   
   return (
@@ -26,7 +26,7 @@ const HomeScreen = () => {
         </View>
         <View style={styles.hugContainer}>
           <View style={styles.buttonRow}>
-            <ButtonXL title="Scan catch"/>
+            <ButtonXL title="Scan catch" onPress={() => navigation.navigate('Scan')}/>
             <ButtonXL title="View FishDex"/>
               </View>
           <View style={styles.buttonRow}>
@@ -48,7 +48,7 @@ const HomeScreen = () => {
           </View>
         </ScrollView>
         <View style={styles.navContainer}>
-          <NavBar />
+          <NavBar navigation={navigation} />
         </View>
     </View>
   );

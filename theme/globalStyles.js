@@ -32,7 +32,6 @@ export default StyleSheet.create({
   pageContainer: {
     paddingHorizontal: spacing.xl,
     paddingVertical: spacing.xxl,
-    paddingBottom: 144,
     backgroundColor: colors.background,
     gap: spacing.xl,
     overflow: 'visible',
