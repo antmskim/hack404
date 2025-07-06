@@ -1,10 +1,12 @@
 import React from 'react';
+import { useNavigation } from '@react-navigation/native';
 import { View, TouchableOpacity, Text, StyleSheet } from 'react-native';
 import { colors } from '../theme/colors';
 import { spacing } from '../theme/spacing';
 import { typography } from '../theme/typography';
 
 const NavBar = () => {
+  const navigation = useNavigation();
   const navItems = [
     {
       label: "Home",
@@ -31,6 +33,11 @@ const NavBar = () => {
           key={index}
           style={[styles.navItem, { left: item.left }]}
           accessibilityLabel={item.label}
+          onPress={() => {
+            if (item.label === "Home") {
+              navigation.navigate('Home');
+            }
+          }}
         >
           {/* Icon placeholder - simple colored square */}
           <View style={styles.iconPlaceholder} />
@@ -41,6 +48,7 @@ const NavBar = () => {
       <TouchableOpacity 
         style={styles.scanButton}
         accessibilityLabel="Scan"
+        onPress={() => navigation.navigate('Scan')}
       >
         {/* Scan icon placeholder - circle with different color */}
         <View style={styles.scanIconPlaceholder} />
