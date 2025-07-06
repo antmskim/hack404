@@ -12,6 +12,7 @@ export const typography = {
     },
     fontWeight: {
       regular: 'normal', // Regular weight
+      SemiBold: 'SemiBold',
       bold: 'bold',    // Bold weight
     },
     h1: {
@@ -28,6 +29,11 @@ export const typography = {
         fontFamily: 'Fredoka',
         fontSize: 22,
         fontWeight: 'bold',
+      },
+      buttonTextLight: {
+        fontFamily: 'Fredoka',
+        fontSize: 22,
+        fontWeight: 'SemiBold',
       },
       body: {
         fontFamily: 'Fredoka',

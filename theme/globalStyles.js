@@ -17,6 +17,10 @@ export default StyleSheet.create({
     ...typography.buttonText,
     color: colors.neutral.white,
   },
+  buttonTextLight: {
+    ...typography.buttonTextLight,
+    color: colors.neutral.white,
+  },
   textBody: {
     ...typography.body,
     color: colors.text,
