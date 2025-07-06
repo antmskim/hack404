@@ -13,6 +13,10 @@ export default StyleSheet.create({
     ...typography.h2,
     color: colors.text,
   },
+  h3: {
+    ...typography.h3,
+    color: colors.text,
+  },
   buttonText: {
     ...typography.buttonText,
     color: colors.neutral.white,

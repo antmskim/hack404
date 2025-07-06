@@ -25,6 +25,11 @@ export const typography = {
         fontSize: 28,
         fontWeight: 'normal',
       },
+      h3: {
+        fontFamily: 'Fredoka',
+        fontSize: 20,
+        fontWeight: 'SemiBold',
+      },
       buttonText: {
         fontFamily: 'Fredoka',
         fontSize: 22,
