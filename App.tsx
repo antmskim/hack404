@@ -8,6 +8,7 @@ import Map from './screens/Map'; // Import the Map screen
 import Scan from './screens/Scan'; // Import the Scan screen
 import ScanLegal from './screens/ScanLegal'; // Import the ScanLegal screen
 import ScanIllegal from './screens/ScanIllegal';
+import Dex from './screens/Dex'; // Import the FishDex screen
 
 const Stack = createStackNavigator();
 
@@ -23,6 +24,7 @@ function App() {
         <Stack.Screen name="Map" component={Map} options={{ headerShown: false }} />
         <Stack.Screen name="ScanLegal" component={ScanLegal} options={{ headerShown: false }} />
         <Stack.Screen name="ScanIllegal" component={ScanLegal} options={{ headerShown: false }} />
+        <Stack.Screen name="Dex" component={Dex} options={{ headerShown: false }} />
       </Stack.Navigator>
     </NavigationContainer> 
   );

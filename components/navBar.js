@@ -37,6 +37,12 @@ const NavBar = () => {
             if (item.label === "Home") {
               navigation.navigate('Home');
             }
+            if (item.label === "Zone") {
+              navigation.navigate('Map');
+            }
+            if (item.label === "Dex") {
+              navigation.navigate('Dex');
+            }
           }}
         >
           {/* Icon placeholder - simple colored square */}
@@ -50,6 +56,12 @@ const NavBar = () => {
         accessibilityLabel="Scan"
         onPress={() => navigation.navigate('Scan')}
       >
+      <TouchableOpacity 
+        accessibilityLabel="Dex"
+        onPress={() => navigation.navigate('Dex')}
+      >
+
+      </TouchableOpacity>
         {/* Scan icon placeholder - circle with different color */}
         <View style={styles.scanIconPlaceholder} />
         <Text style={styles.scanLabel}>Scan</Text>
